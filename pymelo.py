@@ -14,25 +14,17 @@ class Check:
         if response.status_code == 200:
             data = response.json()
             if data.get("data", {}).get("check", {}).get("errors"):
-                error_message = data.get("data", {}).get(
-                    "check", {}).get("errors")[0].get("message")
+                error_message = data.get("data", {}).get("check", {}).get("errors")[0].get("message")
                 raise PomeloError(error_message)
             else:
                 self.username = data.get("data", {}).get("username")
-                self.errors = data.get("data", {}).get(
-                    "check", {}).get("errors")
-                self.status = data.get("data", {}).get(
-                    "check", {}).get("status")
-                self.attempt = data.get("data", {}).get(
-                    "check", {}).get("attempt")
+                self.status = data.get("data", {}).get("check", {}).get("status")
+                self.attempt = data.get("data", {}).get("check", {}).get("attempt")
         else:
             raise PomeloError("Failed to make API request.")
 
     def username(self):
         return self.username
-
-    def errors(self):
-        return self.errors
 
     def status(self):
         return self.status
