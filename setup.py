@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pymelo",
-    version="0.0.1",
+    version="0.0.2",
     author="Nemupy",
     author_email="nemu.otoyume@gmail.com",
     description="Wrapper for DiscordPomeloAPI",
