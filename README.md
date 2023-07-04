@@ -29,7 +29,7 @@ else:
 # The username 'nemupy' is not available.
 ```
 
-# Response
+# Method
 - `username` Your checked username.
 - `status` See [DiscordPomeloAPI](https://github.com/Lixqa/DiscordPomelo/blob/main/README.md#Status).
 - `attempt` How many attempts it took until a valid response was returned by discord.
